@@ -57,6 +57,8 @@ index=main host=Netflix type="TV Show"
 **Outcome:**  
 I discovered that certain docuseries spanned multiple seasons, useful for identifying binge-worthy content patterns.
 
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/56269f26-aa82-4aa1-9577-cb910e24fdf3" />
+
 ---
 
 #### 🔎 Use Case 3: Which countries produce the most G-rated movies?
@@ -70,6 +72,8 @@ index=main host=Netflix rating="G" type="Movie"
 
 **Outcome:**  
 The U.S. was the top source, but several international countries also produced G-rated content.
+
+<img width="1916" height="1025" alt="image" src="https://github.com/user-attachments/assets/86149437-ce32-4ea7-898a-9b6f1adda22d" />
 
 ---
 
@@ -89,7 +93,9 @@ index=pathcode "3AADBF7E527FC1A050E1C97FEA1CBA4D"
 ```
 
 **Result:**  
-This revealed the file `EvilScript.exe` uploaded from IP address `192.168.1.50`.
+This revealed the file `EvilScript.exe` uploaded from IP address `192.168.1.10`.
+
+<img width="1919" height="990" alt="image" src="https://github.com/user-attachments/assets/a069ab50-86ac-4944-b353-179eaada108e" />
 
 ---
 
@@ -104,18 +110,22 @@ index=pathcode IP="192.168.1.50"
 **Insight:**  
 This user tried multiple login attempts before uploading the malware, suggesting a brute-force tactic.
 
+<img width="1919" height="999" alt="image" src="https://github.com/user-attachments/assets/5ae59f34-8b2b-443e-b4a0-2f330f69f26b" />
+
 ---
 
 #### 🧪 Step 3: Identify the User Agent
 
 **Query:**
 ```
-index=pathcode IP="192.168.1.50"
+index=pathcode IP="192.168.1.10"
 | table _time "User Agent"
 ```
 
 **Result:**  
 The attacker used a non-standard client that stood out against normal traffic — a good detection signature.
+
+<img width="1919" height="995" alt="image" src="https://github.com/user-attachments/assets/1bd52ae4-a3b5-4f26-a516-e1c2d2524a0d" />
 
 ---
 
@@ -130,6 +140,9 @@ index=pathcode earliest="06/04/2023:17:55:00" latest="06/04/2023:18:05:00"
 **Outcome:**  
 One other user uploaded a benign file within the same time window, confirming it wasn’t just the attacker active during that period.
 
+<img width="1919" height="1000" alt="image" src="https://github.com/user-attachments/assets/17efdd81-4a0f-49ff-949e-9017d0892d4f" />
+<img width="1914" height="986" alt="image" src="https://github.com/user-attachments/assets/94aea756-44c2-4c4e-b459-85db6fa0e1f6" />
+
 ---
 
 #### 🧪 Step 5: Compare uploaded hashes
@@ -142,6 +155,10 @@ index=pathcode earliest="06/04/2023:17:55:00" latest="06/04/2023:18:05:00"
 
 **Result:**  
 The hash of `EvilScript.exe` matched the known malicious hash. The second file’s hash did not, confirming it was unrelated.
+
+<img width="1919" height="925" alt="image" src="https://github.com/user-attachments/assets/6484a0cf-544e-42c7-a7fe-b26bd8ef5692" />
+<img width="1919" height="936" alt="image" src="https://github.com/user-attachments/assets/48b6b793-908b-4865-887d-18d5e0f5d79e" />
+
 
 ---
 
