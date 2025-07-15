@@ -41,6 +41,8 @@ index=main host=Netflix rating="TV-PG"
 **Outcome:**  
 This returned `1,726` results, showing how widespread this rating is in the Netflix catalog.
 
+<img width="1912" height="1007" alt="image" src="https://github.com/user-attachments/assets/2cdcd91f-1b22-4552-9c34-d04d7ccb73e4" />
+
 ---
 
 #### 🔎 Use Case 2: What is the longest series by number of seasons?
